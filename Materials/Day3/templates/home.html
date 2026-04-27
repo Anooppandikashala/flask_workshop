@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Home — QuickShop{% endblock %}
+
+{% block content %}
+<div class="text-center py-5 bg-primary text-white rounded">
+  <h1 class="display-4">Welcome to QuickShop</h1>
+  <p class="lead">Find the best products at unbeatable prices</p>
+  <a href="{{ url_for('products') }}" class="btn btn-light btn-lg">Shop Now</a>
+</div>
+{% endblock %}

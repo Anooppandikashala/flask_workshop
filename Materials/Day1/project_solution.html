@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickShop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">QuickShop</a>
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="#">Products</a>
+          <a class="nav-link" href="#">
+            Cart <span class="badge bg-warning text-dark" id="cart-badge">0</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-primary text-white text-center py-5">
+      <h1 class="display-4">Welcome to QuickShop</h1>
+      <p class="lead">Find the best products at unbeatable prices</p>
+      <a href="#products" class="btn btn-light btn-lg mt-2">Shop Now</a>
+    </div>
+
+    <!-- Products Section -->
+    <div class="container my-5" id="products">
+      <h2 class="mb-4">Featured Products</h2>
+      <div class="row g-4">
+
+        <!-- Product 1 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://placehold.co/300x200?text=T-Shirt" class="card-img-top" alt="T-Shirt" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Classic T-Shirt</h5>
+              <p class="card-text text-muted flex-grow-1">Comfortable 100% cotton t-shirt for everyday wear.</p>
+              <p class="fw-bold text-success fs-5">Rs. 20.00</p>
+              <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://placehold.co/300x200?text=Jeans" class="card-img-top" alt="Jeans" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Slim Jeans</h5>
+              <p class="card-text text-muted flex-grow-1">Classic slim-fit denim jeans, great for any occasion.</p>
+              <p class="fw-bold text-success fs-5">Rs. 50.00</p>
+              <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://placehold.co/300x200?text=Shoes" class="card-img-top" alt="Shoes" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Running Shoes</h5>
+              <p class="card-text text-muted flex-grow-1">Lightweight running shoes built for speed and comfort.</p>
+              <p class="fw-bold text-success fs-5">Rs. 40.00</p>
+              <button class="btn btn-primary add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+      <p class="mb-0">© 2025 QuickShop. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      let cartCount = 0;
+      const cartBadge = document.getElementById("cart-badge");
+
+      document.querySelectorAll(".add-to-cart-btn").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          cartCount++;
+          cartBadge.textContent = cartCount;
+        });
+      });
+    </script>
+  </body>
+</html>

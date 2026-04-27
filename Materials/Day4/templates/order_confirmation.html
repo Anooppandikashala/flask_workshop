@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Order Confirmed — QuickShop{% endblock %}
+
+{% block content %}
+<div class="text-center py-4">
+  <div class="mb-4">
+    <span style="font-size: 4rem;">✓</span>
+  </div>
+  <h2 class="text-success">Order Confirmed!</h2>
+  <p class="lead">Thank you for your order. Order #{{ order.id }} has been placed.</p>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <div class="card shadow-sm mb-4">
+      <div class="card-body">
+        <h5 class="card-title">Order Details</h5>
+        <p><strong>Order ID:</strong> #{{ order.id }}</p>
+        <p><strong>Date:</strong> {{ order.created_at }}</p>
+        <p><strong>Status:</strong> <span class="badge bg-success">{{ order.status|capitalize }}</span></p>
+        <hr />
+        <h6>Items</h6>
+        {% for item in order.get("items") %}
+        <div class="d-flex justify-content-between">
+          <span>{{ item.name }} × {{ item.qty }}</span>
+          <span>${{ "%.2f"|format(item.subtotal) }}</span>
+        </div>
+        {% endfor %}
+        <hr />
+        <div class="d-flex justify-content-between fw-bold">
+          <span>Total</span>
+          <span class="text-success">${{ "%.2f"|format(order.total) }}</span>
+        </div>
+        <hr />
+        <h6>Shipping Address</h6>
+        <p class="mb-0">{{ order.address.full_name }}</p>
+        <p class="mb-0">{{ order.address.address }}</p>
+        <p class="mb-0">{{ order.address.city }}, {{ order.address.zip_code }}</p>
+      </div>
+    </div>
+    <div class="text-center">
+      <a href="{{ url_for('orders') }}" class="btn btn-outline-dark me-2">My Orders</a>
+      <a href="{{ url_for('products') }}" class="btn btn-primary">Continue Shopping</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

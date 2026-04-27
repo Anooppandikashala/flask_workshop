@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classic T-Shirt — MyShop</title>
+    <link rel="stylesheet" href="./product_page_styles.css" />
+  </head>
+  <body>
+
+    <header>
+      <nav>
+        <h1>MyShop</h1>
+        <div>
+          <a href="#">Home</a>
+          <a href="#">Products</a>
+          <a href="#">Cart</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="product-card">
+        <img src="https://placehold.co/300" alt="Classic T-Shirt" />
+        <div class="product-info">
+            <h2>Classic T-Shirt</h2>
+            <p>A comfortable everyday t-shirt made from 100% cotton. Available in multiple colours.</p>
+            <p class="price">Rs. 20.00</p>
+            <!-- Quantity selector -->
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                <button id="minus-btn">−</button>
+                <span id="quantity-display">1</span>
+                <button id="plus-btn">+</button>
+            </div>
+          <!-- <button class="btn-cart">Add to Cart</button> -->
+          <button id="cart-btn" class="btn-cart">Add to Cart</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 MyShop</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

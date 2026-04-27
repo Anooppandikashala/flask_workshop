@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}My Orders — QuickShop{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">My Orders</h2>
+
+{% if orders %}
+{% for order in orders %}
+<div class="card shadow-sm mb-3">
+  <div class="card-body">
+    <div class="d-flex justify-content-between align-items-start">
+      <div>
+        <h5 class="mb-1">Order #{{ order.id }}</h5>
+        <p class="text-muted mb-1">{{ order.created_at }}</p>
+        <span class="badge bg-success">{{ order.status|capitalize }}</span>
+      </div>
+      <div class="text-end">
+        <p class="fw-bold fs-5 text-success mb-0">${{ "%.2f"|format(order.total) }}</p>
+        <small class="text-muted">{{ order.get("items")|length }} item(s)</small>
+      </div>
+    </div>
+    <hr />
+    {% for item in order.get("items") %}
+    <div class="d-flex justify-content-between">
+      <span>{{ item.name }} × {{ item.qty }}</span>
+      <span>${{ "%.2f"|format(item.subtotal) }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}
+
+{% else %}
+<div class="text-center py-5">
+  <h4 class="text-muted">You haven't placed any orders yet</h4>
+  <a href="{{ url_for('products') }}" class="btn btn-primary mt-3">Start Shopping</a>
+</div>
+{% endif %}
+{% endblock %}

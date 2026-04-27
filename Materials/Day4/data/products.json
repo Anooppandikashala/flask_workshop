@@ -1,0 +1,8 @@
+[
+  {"id": 1, "name": "Classic T-Shirt",  "price": 20.00, "stock": 50, "category": "clothing",    "image": "https://placehold.co/300x200?text=T-Shirt",  "description": "A comfortable everyday t-shirt."},
+  {"id": 2, "name": "Slim Jeans",       "price": 50.00, "stock": 30, "category": "clothing",    "image": "https://placehold.co/300x200?text=Jeans",    "description": "Classic slim-fit denim jeans."},
+  {"id": 3, "name": "Running Shoes",    "price": 40.00, "stock": 20, "category": "footwear",    "image": "https://placehold.co/300x200?text=Shoes",    "description": "Lightweight running shoes."},
+  {"id": 4, "name": "Snapback Cap",     "price": 15.00, "stock": 0,  "category": "accessories", "image": "https://placehold.co/300x200?text=Cap",      "description": "Stylish snapback cap."},
+  {"id": 5, "name": "Leather Belt",     "price": 25.00, "stock": 40, "category": "accessories", "image": "https://placehold.co/300x200?text=Belt",     "description": "Genuine leather belt."},
+  {"id": 6, "name": "Winter Jacket",    "price": 90.00, "stock": 15, "category": "clothing",    "image": "https://placehold.co/300x200?text=Jacket",   "description": "Warm and stylish winter jacket."}
+]

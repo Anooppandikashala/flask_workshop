@@ -1,0 +1,23 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return render_template("home.html")
+
+@app.route("/about")
+def about():
+    return "About Page"
+
+@app.route("/cart")
+def cart():
+    return "Cart Page"
+
+@app.route("/products")
+def products():
+    return "Products Page"
+
+
+if __name__ == "__main__":
+    app.run(debug=True)

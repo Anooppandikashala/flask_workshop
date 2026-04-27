@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "user_id": 1,
+    "items": [
+      {
+        "product_id": 1,
+        "name": "Classic T-Shirt",
+        "price": 20.0,
+        "qty": 2,
+        "subtotal": 40.0
+      },
+      {
+        "product_id": 2,
+        "name": "Slim Jeans",
+        "price": 50.0,
+        "qty": 2,
+        "subtotal": 100.0
+      },
+      {
+        "product_id": 3,
+        "name": "Running Shoes",
+        "price": 40.0,
+        "qty": 2,
+        "subtotal": 80.0
+      }
+    ],
+    "total": 220.0,
+    "address": {
+      "full_name": "twerew",
+      "address": "ewrwerwer",
+      "city": "rwerer",
+      "zip_code": "123455"
+    },
+    "status": "confirmed",
+    "created_at": "2026-04-27 14:51:21"
+  }
+]
