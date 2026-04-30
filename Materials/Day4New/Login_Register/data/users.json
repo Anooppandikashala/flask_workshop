@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "name": "anoop",
+    "email": "abc@gmail.com",
+    "password": "scrypt:32768:8:1$7LjikOKccax6xHtX$2064c800072b62c1bd1a9937e55ddb9e8b7750c961e251edbae70f0cc3db0a402e36fe2f5304d7c195e1480f7ebab662daa85be3fd3debafe238a56ffc2c9055",
+    "is_admin": false
+  }
+]
